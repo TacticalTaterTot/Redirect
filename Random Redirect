@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect</title>
+    <script>
+        window.onload = function() {
+            const links = [
+                "https://www.chess.com/clubs/forum/view/when-is-your-birthday-22",
+                "https://www.chess.com/clubs/forum/view/useless-admin-tier-list",
+                "https://www.chess.com/clubs/forum/view/members-gained-statistics"
+            ];
+            const randomLink = links[Math.floor(Math.random() * links.length)];
+            window.location.href = randomLink;
+        };
+    </script>
+</head>
+<body>
+    <p>If you are not redirected, <a id="manualLink" href="#">click here</a>.</p>
+    <script>
+        document.getElementById("manualLink").href = [
+            "https://www.chess.com/clubs/forum/view/when-is-your-birthday-22",
+            "https://www.chess.com/clubs/forum/view/useless-admin-tier-list",
+            "https://www.chess.com/clubs/forum/view/members-gained-statistics"
+        ][Math.floor(Math.random() * 3)];
+    </script>
+</body>
+</html>
